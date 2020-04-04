@@ -1,0 +1,18 @@
+<%- include('./includes/header.ejs') %>
+        <div class="container">
+            <h1>Howdy User, Wassup!</h1>
+            <% if(posts.length > 0){ %>
+                <div class="items">
+                    <% for(post of posts){ %>
+                        <div class="item">
+                            <a class="post-header" href="/<%= post.id %>"><%= post.header %></a>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Google_Arts_and_Culture_Logo.png" alt="Post Image Placeholder">
+                            <p class="post-content"><%= post.content %></p>
+                        </div>
+                    <% }%>    
+                </div>
+            <%}else{ %>
+                <h3>No Posts available please navigate to Add Post</h3>
+            <% } %>
+        </div>
+<%- include('./includes/footer.ejs') %>

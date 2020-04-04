@@ -1,0 +1,15 @@
+<%- include('./includes/header.ejs') %>
+    <div class="form-content">
+        <h1 class="admin-header">Add New Post</h1>
+        <form action="/" method="POST">
+            <label for="Post Header">Post Header</label>
+            <input type="text" name="postHeader">
+            <label for="Image Url">Image URL</label>
+            <input type="text" name="imgUrl">
+            <label for="Post Content">Content</label>
+            <textarea name="postContent" cols="10" rows="5"></textarea>
+            <br>
+            <button type="submit">Submit Post</button>
+        </form>
+    </div>
+<%- include('./includes/footer.ejs') %>

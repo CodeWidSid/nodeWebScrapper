@@ -1,0 +1,16 @@
+<%- include('./includes/header.ejs') %>
+    <div class="form-content">
+        <h1 class="admin-header">Edit Post</h1>
+        <form action="/" method="POST">
+            <label for="Post Header">Post Header</label>
+            <input type="text" name="postHeader" value="<% if(postData){ %><%= postData.header %><% } %>">
+            <label for="Image Url">Image URL</label>
+            <input type="text" name="imgUrl" value="<% if(postData){ %><%= postData.imageUrl %><% } %>">
+            <label for="Post Content">Content</label>
+            <textarea name="postContent" cols="10" rows="5"><% if(postData){ %><%= postData.content %><% } %></textarea>
+            <br>
+            <button type="submit">Submit Post</button>
+            <input type="hidden" name="editFlagId" value="<%= postData.id %>">
+        </form>
+    </div>
+<%- include('./includes/footer.ejs') %>
